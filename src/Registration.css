@@ -1,0 +1,178 @@
+/* ======================= Main Page ======================= */
+.reg-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f7fa; /* light professional background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* ======================= Card Container ======================= */
+.reg-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* ======================= Form Title ======================= */
+.reg-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #1a73e8;
+}
+
+/* ======================= Form Grid ======================= */
+.reg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns side by side */
+  gap: 20px 30px; /* row-gap and column-gap */
+}
+
+/* ======================= Form Field ======================= */
+.reg-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-field label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.reg-field input,
+.reg-field select {
+  padding: 10px 12px;
+  border: 1px solid #cfd3d9;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.reg-field input:focus,
+.reg-field select:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 6px rgba(26, 115, 232, 0.3);
+}
+
+.reg-error {
+  color: #e53935;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+/* ======================= Form Field Backgrounds ======================= */
+.reg-field input,
+.reg-field select {
+  padding: 17px 5px;
+  border: 1px solid #cfd3d9;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s;
+  background: #f9f9fd; /* softer, elegant background for all fields */
+}
+
+/* Focus effect */
+.reg-field input:focus,
+.reg-field select:focus {
+  border-color: #43e81a;
+  box-shadow: 0 0 8px rgba(4, 238, 4, 0.3);
+  background: #ffffff; /* highlights focused field */
+}
+
+
+/* ======================= Single Column Fields ======================= */
+/* Only target the submit button container */
+.reg-grid > .reg-actions {
+  grid-column: span 2; /* span full width */
+}
+
+/* ======================= Buttons ======================= */
+.reg-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.reg-actions button {
+  background: #1a73e8;
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.reg-actions button:hover {
+  background: #1664c1;
+  transform: translateY(-2px);
+}
+
+/* ======================= Popup ======================= */
+.reg-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.reg-popup-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.reg-popup-content h3 {
+  color: #1a73e8;
+  margin-bottom: 15px;
+}
+
+.reg-popup-content p {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.reg-popup-content button {
+  background: #1a73e8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.reg-popup-content button:hover {
+  background: #1664c1;
+}
+
+/* ======================= Responsive ======================= */
+@media (max-width: 768px) {
+  .reg-grid {
+    grid-template-columns: 1fr; /* stack fields on smaller screens */
+  }
+
+  .reg-grid > .reg-actions,
+  .reg-grid > .reg-field:nth-last-child(-n+3) {
+    grid-column: span 1;
+  }
+}

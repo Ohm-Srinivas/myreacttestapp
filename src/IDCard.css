@@ -1,0 +1,111 @@
+/* Container & Form */
+.page-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #f8fbf8;
+}
+
+.form-card {
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: linear-gradient(to right, #68f1bd, #5be99b, #1de147);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-card label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+}
+
+/* Buttons */
+.submit-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to right, #b7eb3f, #07a202, #025004);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 420px;
+  text-align: center;
+}
+
+/* ID Card Styling */
+.id-card {
+  width: 300px;
+  height: 180px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: url("./Images/fam_Card1.jpg") no-repeat center/cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #010000;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(64, 1, 1, 0.3);
+}
+
+
